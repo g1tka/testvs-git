@@ -1,1 +1,33 @@
-<p>git連携テスト</p>
+<h4>git連携テスト</h4>
+<p>VScodeのインストールとGitのインストールを行いました。<br/>
+gitの連携がうまくいかず、settings.jsonにgitファイルのパスを記入しました。<br/>
+windowsのコマンドプロンプトを起動し、git --versionでgitの存在を確認。<br/>
+再起動で解消。<br/>
+git config --global user.name xxxxxx<br/>
+git config --global user.email xxxxx@xxx.xxx<br/>
+それとgithubに作成したリポジトリを紐づけるのに<br/>
+git remote add origin xxxxxxxxxx(SSH)<br/>
+git branch -M main<br/>
+トークンのコピーはViで未記入。<br/>
+ファイルがgithubに連携されていないようで<br/>
+git remote set-url origin 新しいリポジトリのURL（https）
+pwd> PS C:\vscode-test
+git ls-filesでtest.htmlは表示されるので、追跡している。</p>
+
+git remote -v
+git remote add origin URL
+git remote set-url origin URL
+だめ。
+
+git branch > *mainここにいる。
+
+2日目。結論、Git連携できた。
+やったこと。１．Gitの再インストール。
+1.5.環境変数の設定。昨日と同じ。
+２．jsonファイルへの記入を変更。一つだとエラーだけど２つ書くことで回避。
+{
+    "git.path": "C:\\Program Files\\Git\\cmd\\git.exe"
+}
+３．ファイル保存。VScode再起動（消して、起動）
+git --versionが確認できた。（これもできなかったので、前進か）
+git add . commit push ...昨日分のはpushできたが…
