@@ -1,2 +1,52 @@
-<!-- 予定:Java開発環境用意/リセットCSSの導入/ヘッダーフッターの作成（別）
-      /Bootstrapの練習 -->
+<a href="index.html">Topページ</a>
+<h3>6日目</h3>
+Javaのインストーラーを実行。<br/>
+Extension Pack For Javaという拡張機能をインストール<br/>
+メニュー「表示」-「コマンドパレット」<br/>
+"java create java project"-「no build tools」<br/>
+ファイルを新たに作成。<br/>
+試しにデスクトップに「testforjava」フォルダを用意<br/>
+そのファイルを指定。プロジェクトフォルダ名を入力してEnter<br/>
+"Hello World!"とした。実行すると、新しいウインドウ。<br/>
+そこでメニュー「実行」-「デバッグの開始」<br/>
+いろいろでたけども、ターミナルでHello World!とあり実行確認<br/>
+javaとして作成していくことになる。<br/>
+<br/>
+<h4>Webサイトの作り方。</h4>
+1. サーバーを契約する。<br/>
+2. ドメインを取得する。<br/>
+3. webページを制作する。<br/>
+<br/>
+1. xserverがおすすめ？<br/>
+2. xserver経由かお名前.comがおすすめ？<br/>
+3.woedpress,rubyのようなフレームワーク、ノーコード、
+HTML,CSS<br/>
+<br/>
+JSP:HTMLとJavaコードを組み合わせて動的なページを作る技術。<br/>
+あくまでもサーバーサイドのものです。<br/>
+HTMLはクライエントサイド。<br/>
+イメージができてきた。<br/>
+<br/>
+ctrl+Shift+Vで貼り付けでなくてプレビューがでてきた!!<br/>
+HTMLファイルに対してJavaコードを追加するのではなく、
+ServletやJSPで生成したコンテンツをHTMLとしてブラウザに
+提供します。<br/>
+静的なHTMLファイルと動的なコンテンツ（例えば、
+データベースから取得した情報など）を組み合わせる場合、
+Javaコードが生成する動的コンテンツをHTML内に埋め込む形
+になります。<br/>
+test.jspというファイルにHTMLのように記述。<br/>
+test.javaというファイルがservletにあたる。<br/>
+動的な部分をプレビューするにはTomcatが必須。<br/>
+ディレクトリ構造として、<br/>
+secディレクトリを作成。<br/>
+/src/main/java/com/example/HelloServlet.java<br/>
+/webapp/WEB-INF/web.xml, index.jsp<br/>
+という構造が基本のよう。<br/>
+<br/>
+test.jspを作成したが、ローカルで開いたところでコードそのまま。<br/>
+Apache Tomcatなどのアプリケーションサーバーを使用する必要があります。<br/>
+デプロイ、サーバー起動して試す必要があります。<br/>
+<br/>
+Rubyの場合と記述方法が似ていて、<%= ... %>という記述だった。<br/>
+<br/>
