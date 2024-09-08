@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
@@ -16,44 +17,44 @@ public class NumberGuessingGameSwing {
     }
 
     private void createAndShowGUI() {
-        // フレームの設定
         frame = new JFrame("数字当てゲーム");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(300, 200);
-        frame.setLayout(null);
+        frame.setSize(400, 250);
+        frame.setLayout(new BorderLayout());
 
-        // ラベルの設定
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(3, 2, 10, 10));
+        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+
         JLabel instructionLabel = new JLabel("1から100までの数を当ててください:");
-        instructionLabel.setBounds(20, 20, 250, 25);
-        frame.add(instructionLabel);
-
-        // 入力フィールドの設定
         guessInput = new JTextField();
-        guessInput.setBounds(20, 50, 100, 25);
-        frame.add(guessInput);
-
-        // ボタンの設定
         guessButton = new JButton("推測する");
-        guessButton.setBounds(130, 50, 120, 25);
-        frame.add(guessButton);
-
-        // メッセージラベルの設定
         messageLabel = new JLabel("");
-        messageLabel.setBounds(20, 80, 250, 25);
-        frame.add(messageLabel);
 
-        // ボタンのアクションリスナーを設定
+        instructionLabel.setFont(new Font("Arial", Font.BOLD, 16));
+        guessInput.setFont(new Font("Arial", Font.PLAIN, 14));
+        guessButton.setFont(new Font("Arial", Font.BOLD, 14));
+        messageLabel.setFont(new Font("Arial", Font.PLAIN, 14));
+
+        guessButton.setBackground(Color.GREEN);
+        guessButton.setForeground(Color.WHITE);
+        messageLabel.setForeground(Color.RED);
+
+        panel.add(instructionLabel);
+        panel.add(guessInput);
+        panel.add(guessButton);
+        panel.add(messageLabel);
+
+        frame.add(panel, BorderLayout.CENTER);
+
         guessButton.addActionListener(new GuessButtonListener());
 
-        // ゲームの初期化
         initializeGame();
 
-        // フレームを表示
         frame.setVisible(true);
     }
 
     private void initializeGame() {
-        // ゲームの初期設定
         Random random = new Random();
         numberToGuess = random.nextInt(100) + 1;
         numberOfTries = 0;
@@ -63,11 +64,9 @@ public class NumberGuessingGameSwing {
         @Override
         public void actionPerformed(ActionEvent e) {
             try {
-                // ユーザーの入力を取得
                 int userGuess = Integer.parseInt(guessInput.getText());
                 numberOfTries++;
 
-                // ゲームのロジック
                 if (userGuess < numberToGuess) {
                     messageLabel.setText("もっと大きな数です!");
                 } else if (userGuess > numberToGuess) {
