@@ -1,0 +1,71 @@
+<!-- 予定:tomcatの導入、Javaテスト/ヘッダーフッターの作成（別）/Bootstrapの練習 
+ Apache Tomcat, デプロイ用のwebappsディレクトリ用意-->
+<a href="index.html">Topページ</a>
+<h3>10日目</h3>
+Apache NetBeansをインストールしたものの、これは何？ということで学習。<br/>
+IDE（Integrated Development Environment）は、プログラミングや
+ソフトウェア開発を効率的に行うための統合開発環境です。<br/>
+コードエディタ、コンパイラなどの機能がある……<br/>
+<br/>
+代表的なIDE<br/>
+Eclipse<br/>
+JavaやC/C++などの開発に使用されるオープンソースのIDE。<br/>
+IntelliJ IDEA<br/>
+Javaをはじめ、多くのプログラミング言語に対応した商用IDE。<br/>
+NetBeans<br/>
+Javaの開発に強みを持ち、PHPやC/C++にも対応したオープンソースのIDE。<br/>
+Visual Studio<br/>
+Microsoftが提供するIDEで、C#やC++、Pythonなどの開発に対応。<br/>
+Visual Studio Code (VSCode)<br/>
+軽量で拡張性の高いエディタで、プラグインを使ってIDEのように使用できる。多くの言語に対応。<br/>
+<br/>
+vscodeではなく、NetBeansでの解説がついていたので、導入したのだった。<br/>
+<br/>
+IDEの利点<br/>
+統合環境<br/>
+開発に必要なツールが一つの環境に統合されているため、作業の効率が上がります。<br/>
+生産性の向上<br/>
+コード補完やエラーチェックなどの機能により、コーディングの生産性が向上します。<br/>
+デバッグの容易さ<br/>
+デバッガを使って、プログラムのバグを効率的に見つけて修正できます。<br/>
+コード管理<br/>
+バージョン管理システムと統合することで、コードの履歴管理が容易になります。<br/>
+IDEを選ぶ際は、開発する言語やプロジェクトのニーズに合わせて選ぶと良いでしょう。<br/>
+とのこと！<br/>
+<br/>
+Hello Worldファイルの実行ができた！（BUILD SUCCESSFUL）<br/>
+ソースファイルを作成する<br/>
+ソース ファイルには、Java プログラミング言語で記述された、プログラマーが理解できるコードが含まれています。
+任意のテキストエディターを使用して、ソース ファイルを作成および編集できます。<br/>
+ソースファイルを.classファイルにコンパイルする<br/>
+Java プログラミング言語コンパイラ( javac) は、ソース ファイルを受け取り、
+そのテキストを Java 仮想マシンが理解できる命令に変換します。
+このファイルに含まれる命令は、バイトコード.classと呼ばれます。<br/>
+プログラムを実行する<br/>
+Java アプリケーションランチャー ツール( java) は、Java 仮想マシンを
+使用してアプリケーションを実行します。<br/>
+javac, java...と記述していくより短くできますよという話。<br/>
+初歩のチュートリアルから勉強していく。<br/>
+<br/>
+<br/>
+Tomcatの操作<br/>
+// Tomcatの起動<br/>
+startup.bat<br/>
+<br/>
+// Tomcatの停止<br/>
+shutdown.bat<br/>
+<br/>
+Tomcatを起動？<br/>
+Tomcatがインストールされているディレクトリに移動<br/>
+bin フォルダに移動し、startup.bat を実行<br/>
+<br/>
+windowsのコマンドプロンプトを実行する際に管理者として実行を選択‼<br/>
+文字化けエラーでたが、実行できた‼<br/>
+解決法：C:\Program Files\Apache Software Foundation
+\Tomcat 10.0\conf\logging.properties の 
+java.util.logging.ConsoleHandler.encoding を変更する。<br/>
+java.util.logging.ConsoleHandler.encoding = UTF-8 を
+ java.util.logging.ConsoleHandler.encoding = SJIS に変更する。<br/>
+ブラウザ を起動し、 http://localhost:8080/ にアクセスする<br/>
+できました‼うれしい<br/>
+次回以降になるが、これも使っていく‼<br/>
