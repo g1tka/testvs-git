@@ -69,3 +69,10 @@ java.util.logging.ConsoleHandler.encoding = UTF-8 を
 ブラウザ を起動し、 http://localhost:8080/ にアクセスする<br/>
 できました‼うれしい<br/>
 次回以降になるが、これも使っていく‼<br/>
+<br/>
+(追記)そのまま閉じてしまったが大丈夫か。<br/>
+cmd再度開く。<br/>
+cd Program Files/Apache Software Foundation/Tomcat 10.1/bin <br/>
+shutdown.bat<br/>
+実行中でない可能性ありとのこと。確認とれてよかった。<br/>
+<br/>
