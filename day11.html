@@ -1,5 +1,3 @@
-<!-- 予定:Javaテスト/ヘッダーフッターの作成（別）/Bootstrapの練習 
-Apache Tomcat, デプロイ用のwebappsディレクトリ用意-->
 <a href="index.html">Topページ</a>
 <h3>11日目</h3>
 Tomcatの起動 : startup.bat<br/>
@@ -9,4 +7,23 @@ Tomcatの停止 : shutdown.bat<br/>
 上手くいかないので、トムキャットの拡張機能について確認。<br/>
 Community Server Connectorsをインストール。<br/>
 リロード！<br/>
-Ctrl+Shift+P<br/>
+X)Ctrl+Shift+P : コマンドパレットを開く<br/>
+<br/>
+Apache Tomcat<br/>
+WebサーバーとWebコンテナの機能を持つJava製の無料ソフトウェア。<br/>
+webコンテナ:サーブレットとJSPの実行環境<br/>
+フォルダ構成<br/>
+Webapps - コンテキストルート<br/>
+        |-HTML / JSP / images  ここまで参照される<br/>
+        |-WEB-INF<br/>
+           |-classes - -class(サーブレットのクラスファイル)<br/>
+           |-web.xml（設定ファイルなど）<br/>
+<br/>
+Webアプリの実行手順<br/>
+ファイルを格納<br/>
+bin\startup.bat<br/>
+ブラウザで実行(8080)<br/>
+bin\shutdown.bat<br/>
+NetBeansで作成した方か、別のアプリを作成し、明日試す。<br/>
+2年前のものだが、https://www.youtube.com/watch?v=1D9PeDnONOQ<br/>
+参考にして実践を進める。<br/>
