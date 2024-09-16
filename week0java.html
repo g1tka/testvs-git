@@ -176,3 +176,41 @@ System.out.println(STRING);<br/>
 コメントアウトせず代入しようとすると、エラーになる。<br/>
 finalを付けて一度定義した変数は、二度と変更できない。<br/>
 final変数は大文字であることが多い。わかりやすい。<br/>
+<br/>
+こういった処理を、順次処理という。<br/>
+分岐処理<br/>
+if文…<br/>
+比較演算子<br/>
+演算子	意味	使用例  <br/>
+>	より大きい	a > 0  <br/>
+>=	以上	a >= 0  <br/>
+<	より小さい	a > 0  <br/>
+<=	以下	a <= 0  <br/>
+==	等しい	a == 0  <br/>
+!=	等しくない	a != 0  <br/>
+<br/>
+<pre><code>
+public static void main(String[] args) {
+	int dice = (int)(Math.random()*7)+1;    //  1から7までの乱数を発生させる
+	//  サイコロの目を入力
+	System.out.println("さいころの目:"+dice);
+	//  値が、サイコロの目の範囲内かどうかを調べる
+	if(1 <= dice && dice <= 6){
+		//  さいころの目が、偶数か、奇数かで、処理を分ける。
+		if(dice == 2 || dice == 4 || dice == 6){
+			System.out.println("丁（チョウ）です。");  //  偶数ならば丁（チョウ）
+		}else{
+			System.out.println("半（ハン）です。");   //  奇数ならば半（ハン）
+		}
+	}else{
+		System.out.println("範囲外の数値です。");
+	}
+}
+</pre></code>
+<br/>
+乱数<br/>
+0からn-1までの乱数を発生させる方法<br/>
+(int)(Math.random()*n);<br/>
+続いて、1からnまでの乱数を発生するためには、以下のようにします。<br/>
+(int)(Math.random()*n)+1;<br/>
+<br/>
